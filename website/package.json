@@ -1,6 +1,6 @@
 {
-  "homepage": "https://alden-ng.github.io/NSERC-TeamProject/website/build/",
-  "name": "website",
+  "homepage": "https://marwan-boys.github.io/NSERC-TeamProject",
+  "name": "build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
