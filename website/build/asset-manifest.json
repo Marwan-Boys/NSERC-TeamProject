@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/NSERC-TeamProject/static/css/main.26741f74.chunk.css",
+    "main.js": "/NSERC-TeamProject/static/js/main.29c1cf49.chunk.js",
+    "main.js.map": "/NSERC-TeamProject/static/js/main.29c1cf49.chunk.js.map",
+    "runtime-main.js": "/NSERC-TeamProject/static/js/runtime-main.091a9082.js",
+    "runtime-main.js.map": "/NSERC-TeamProject/static/js/runtime-main.091a9082.js.map",
+    "static/js/2.195645d0.chunk.js": "/NSERC-TeamProject/static/js/2.195645d0.chunk.js",
+    "static/js/2.195645d0.chunk.js.map": "/NSERC-TeamProject/static/js/2.195645d0.chunk.js.map",
+    "index.html": "/NSERC-TeamProject/index.html",
+    "precache-manifest.372c15976ac2533e6585ef91802d71f4.js": "/NSERC-TeamProject/precache-manifest.372c15976ac2533e6585ef91802d71f4.js",
+    "service-worker.js": "/NSERC-TeamProject/service-worker.js",
+    "static/css/main.26741f74.chunk.css.map": "/NSERC-TeamProject/static/css/main.26741f74.chunk.css.map",
+    "static/js/2.195645d0.chunk.js.LICENSE.txt": "/NSERC-TeamProject/static/js/2.195645d0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.091a9082.js",
+    "static/js/2.195645d0.chunk.js",
+    "static/css/main.26741f74.chunk.css",
+    "static/js/main.29c1cf49.chunk.js"
+  ]
+}
