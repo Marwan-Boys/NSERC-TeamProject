@@ -13,10 +13,10 @@ class App extends Component {
                 <div className={"App"}>
                     <Navbar/>
                     <Switch>
-                        <Route Exact path={'/NSERC-TeamProject/'} component={Dashboard}/>
-                        <Route exact path={'/NSERC-TeamProject/project/:id'} component={ItemDetails}/>
-                        <Route exact path={'/NSERC-TeamProject/signin'} component={SignIn}/>
-                        <Route exact path={'/NSERC-TeamProject/signup'} component={SignUp}/>
+                        <Route Exact path={'/'} component={Dashboard}/>
+                        <Route exact path={'/project/:id'} component={ItemDetails}/>
+                        <Route exact path={'/signin'} component={SignIn}/>
+                        <Route exact path={'/signup'} component={SignUp}/>
                     </Switch>
                 </div>
             </BrowserRouter>)
