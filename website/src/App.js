@@ -14,9 +14,9 @@ class App extends Component {
                     <Navbar/>
                     <Switch>
                         <Route Exact path={'/'} component={Dashboard}/>
-                        <Route exact path={'project/:id'} component={ItemDetails}/>
-                        <Route exact path={'signin'} component={SignIn}/>
-                        <Route exact path={'signup'} component={SignUp}/>
+                        <Route exact path={'/project/:id'} component={ItemDetails}/>
+                        <Route exact path={'/signin'} component={SignIn}/>
+                        <Route exact path={'/signup'} component={SignUp}/>
                     </Switch>
                 </div>
             </BrowserRouter>)
