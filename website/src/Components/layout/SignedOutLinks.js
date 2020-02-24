@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, NavLink} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 const SignedOutLinks = () => {
     return (
@@ -9,5 +9,4 @@ const SignedOutLinks = () => {
         </ul>
     )
 }
-
-export default SignedOutLinks
+export default SignedOutLinks;

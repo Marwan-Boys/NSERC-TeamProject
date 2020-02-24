@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
 
-const Navbar = () => {
+const NavigationBar = () => {
     return (
         <nav className={"nav-wrapper grey darken-3"}>
             <div className={"container"}>
@@ -14,5 +14,4 @@ const Navbar = () => {
         </nav>
     )
 }
-
-export default Navbar
+export default NavigationBar;
