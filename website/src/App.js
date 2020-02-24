@@ -4,6 +4,7 @@ import Navbar from "./Components/layout/NavigationBar";
 import Dashboard from "./Components/dashboard/Dashboard";
 import ItemDetails from "./Components/project/ItemDetails";
 import SignIn from "./Components/authentication/SignIn";
+import SignUp from "./Components/authentication/SignUp";
 
 class App extends Component {
     render() {
@@ -12,9 +13,10 @@ class App extends Component {
                 <div className={"App"}>
                     <Navbar/>
                     <Switch>
+                        <Route exact path={'/project/:id'} component={ItemDetails}/>
+                        <Route exact path={'/signin'} component={SignIn}/>
+                        <Route exact path={'/signup'} component={SignUp}/>
                         <Route Exact path={'/'} component={Dashboard}/>
-                        <Route exact path={'project/:id'} component={ItemDetails}/>
-                        <Route exact path={'signin'} component={SignIn}/>
                     </Switch>
                 </div>
             </BrowserRouter>)
