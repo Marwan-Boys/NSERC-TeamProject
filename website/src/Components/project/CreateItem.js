@@ -14,7 +14,7 @@ class CreateItem extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        //console.log(this.state)
+        console.log(this.state)
         this.props.createProject()
     }
     render() {
@@ -23,7 +23,7 @@ class CreateItem extends Component {
                 <form onSubmit={this.handleSubmit} className={"white"}>
                     <h5 className={"grey-text text-darken-3"}>Create Project</h5>
                     <div className={"input-field"}>
-                        <label htmlfor={"project"}>Project Title</label>
+                        <label htmlFor={"project"}>Project Title</label>
                         <input type={"text"} id={"project"} onChange={this.handleChange}/>
                     </div>
                     <div className={"input-field"}>
