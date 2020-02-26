@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
+import { Redirect } from 'react-router'
 import {createProject} from "../../store/Actions/projectActions";
+import Dashboard from "../dashboard/Dashboard";
+import {Route} from "react-router-dom";
 
 class CreateItem extends Component {
     state = {
@@ -14,8 +17,9 @@ class CreateItem extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
-        this.props.createProject(this.state)
+        console.log(this.state);
+        this.props.createProject(this.state);
+        Redirect(Dashboard, '/');
     }
     render() {
         return (

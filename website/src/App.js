@@ -21,7 +21,8 @@ class App extends Component {
                         <Route Exact path={'/'} component={Dashboard}/>
                     </Switch>
                 </div>
-            </BrowserRouter>)
-            ;}
+            </BrowserRouter>
+        );
+    }
 }
 export default App;
