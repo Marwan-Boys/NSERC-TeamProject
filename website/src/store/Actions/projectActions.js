@@ -12,10 +12,10 @@ export const createProject = (project, callback) => {
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_PROJECT', project});
-            callback(true);
+            callback=true;
         }).catch((err) => {
             dispatch({ type: 'CREATE_PROJECT_ERROR', err});
-            callback(false);
+            callback=false;
         })
     }
 };

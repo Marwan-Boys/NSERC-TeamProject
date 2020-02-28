@@ -20,7 +20,7 @@ class CreateItem extends Component {
         } else if (this.state.description == ''){
             console.log("Please enter the project description!");
         } else {
-            this.props.createProject(this.state, () =>{window.location="/";});
+            this.props.createProject(this.state, () =>{window.location="/dashboard";});
         }
     }
     render() {

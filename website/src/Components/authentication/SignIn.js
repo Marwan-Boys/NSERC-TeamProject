@@ -1,4 +1,8 @@
 import React, {Component} from "react";
+import SignedInLinks from "../layout/SignedInLinks";
+import SignedOutLinks from "../layout/SignedOutLinks";
+import {connect} from 'react-redux'
+import {signIn} from "../../store/Actions/CheckUsers";
 
 class SignIn extends Component {
     state = {
@@ -13,6 +17,7 @@ class SignIn extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
+        this.props.signIn(this.state, () =>{window.location="/dashboard";});
     }
     render() {
         return (
@@ -35,4 +40,11 @@ class SignIn extends Component {
         )
     }
 }
-export default SignIn;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (credentials) => dispatch(signIn(credentials))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SignIn);
