@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
-import { Redirect } from 'react-router'
 import {createProject} from "../../store/Actions/projectActions";
 
 class CreateItem extends Component {
@@ -16,8 +15,13 @@ class CreateItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        this.props.createProject(this.state);
-        window.location="/";
+        if (this.state.project == ''){
+            console.log("Please enter the project title!");
+        } else if (this.state.description == ''){
+            console.log("Please enter the project description!");
+        } else {
+            this.props.createProject(this.state, () =>{window.location="/";});
+        }
     }
     render() {
         return (
@@ -43,7 +47,7 @@ class CreateItem extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createProject: (project) => dispatch (createProject(project))
+        createProject: (project, callback) => dispatch (createProject(project, callback))
     }
 }
 

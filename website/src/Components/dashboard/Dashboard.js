@@ -7,7 +7,7 @@ import {compose} from "redux";
 
 class Dashboard extends Component{
     render(){
-        //console.log(this.props);
+        console.log(this.props);
         const {projects} = this.props;
 
         return (
@@ -26,14 +26,14 @@ class Dashboard extends Component{
 }
 
 const mapStateToProps = (state) => {
-    //console.log(state);
+    console.log(state);
     return {
-        projects: state.project.projects
+        projects: state.firestore.data.projects
     }
 }
 
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'projects'}
+        {collection: 'projects'}
     ]))(Dashboard);
