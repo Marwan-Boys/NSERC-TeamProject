@@ -10,5 +10,5 @@ const ProjectSummary = ({project}) => {
             </div>
         </div>
     )
-}
+};
 export default ProjectSummary;

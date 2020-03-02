@@ -15,9 +15,9 @@ class CreateItem extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        if (this.state.project == ''){
+        if (this.state.project == null){
             console.log("Please enter the project title!");
-        } else if (this.state.description == ''){
+        } else if (this.state.description == null){
             console.log("Please enter the project description!");
         } else {
             this.props.createProject(this.state, () =>{window.location="/dashboard";});

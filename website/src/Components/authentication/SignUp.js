@@ -7,16 +7,16 @@ class SignUp extends Component {
         password: '',
         firstname: '',
         lastname: ''
-    }
+    };
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
-    }
+    };
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
-    }
+    };
     render() {
         return (
             <div className={"container"}>

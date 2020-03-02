@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import SignedInLinks from "../layout/SignedInLinks";
-import SignedOutLinks from "../layout/SignedOutLinks";
 import {connect} from 'react-redux'
 import {signIn} from "../../store/Actions/CheckUsers";
 
@@ -43,7 +41,7 @@ class SignIn extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        signIn: (credentials) => dispatch(signIn(credentials))
+        signIn: (credentials, callback) => dispatch(signIn(credentials, callback))
     }
 }
 

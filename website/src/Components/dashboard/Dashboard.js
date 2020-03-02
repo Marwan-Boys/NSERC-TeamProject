@@ -10,6 +10,7 @@ class Dashboard extends Component{
         console.log(this.props);
         const {projects} = this.props;
 
+
         return (
             <div className={"dashboard container"}>
                 <div className={"row"}>
@@ -28,7 +29,7 @@ class Dashboard extends Component{
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        projects: state.firestore.data.projects
+        projects: state.firestore.ordered.projects
     }
 }
 

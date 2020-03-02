@@ -27,7 +27,7 @@ const ItemDetails = (props) => {
             </div>
         )
     }
-}
+};
 
 const mapStateToProp = (state, ownProps) => {
     console.log(state);
@@ -37,7 +37,7 @@ const mapStateToProp = (state, ownProps) => {
     return {
         project: project
     }
-}
+};
 
 export default compose(
     connect(mapStateToProp),

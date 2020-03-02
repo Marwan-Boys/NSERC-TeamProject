@@ -18,4 +18,4 @@ export const createProject = (project, callback) => {
             callback=false;
         })
     }
-};
+}
