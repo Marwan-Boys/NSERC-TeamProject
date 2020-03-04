@@ -22,7 +22,7 @@ class SignUp extends Component {
         this.props.signUp(this.state);
     };
     render() {
-        const {auth} = this.props;
+        const {auth, authError} = this.props;
         if (auth.uid) return <Redirect to={'/dashboard'}/>;
         return (
             <div className={"container"}>
@@ -46,6 +46,9 @@ class SignUp extends Component {
                     </div>
                     <div className={"input-field"}>
                         <button className={"btn pink lighten-1 z-depth0"}>Create Account</button>
+                        <div className={"red-text center"}>
+                            {authError ? <p>{authError}</p> : null}
+                        </div>
                     </div>
                 </form>
             </div>
@@ -55,13 +58,14 @@ class SignUp extends Component {
 
 const mapStateToProps = (state) => {
     return {
+        authError: state.auth.authError,
         auth: state.firebase.auth
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        signUp: (credentials) => dispatch (signUp(credentials))
+        signUp: (newUser) => dispatch (signUp(newUser))
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps) (SignUp);
