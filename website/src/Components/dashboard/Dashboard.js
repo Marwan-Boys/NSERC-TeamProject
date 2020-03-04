@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
         projects: state.firestore.ordered.projects,
         auth: state.firebase.auth
     }
-}
+};
 
 export default compose(
     connect(mapStateToProps),
