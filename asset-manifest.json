@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/NSERC-TeamProject/static/js/main.172e8118.chunk.js",
-    "main.js.map": "/NSERC-TeamProject/static/js/main.172e8118.chunk.js.map",
+    "main.js": "/NSERC-TeamProject/static/js/main.ef256883.chunk.js",
+    "main.js.map": "/NSERC-TeamProject/static/js/main.ef256883.chunk.js.map",
     "runtime-main.js": "/NSERC-TeamProject/static/js/runtime-main.48558775.js",
     "runtime-main.js.map": "/NSERC-TeamProject/static/js/runtime-main.48558775.js.map",
     "static/js/2.164b6aa9.chunk.js": "/NSERC-TeamProject/static/js/2.164b6aa9.chunk.js",
     "static/js/2.164b6aa9.chunk.js.map": "/NSERC-TeamProject/static/js/2.164b6aa9.chunk.js.map",
     "index.html": "/NSERC-TeamProject/index.html",
-    "precache-manifest.3693599ef7dbb8a18f34e65d5ee6c56d.js": "/NSERC-TeamProject/precache-manifest.3693599ef7dbb8a18f34e65d5ee6c56d.js",
+    "precache-manifest.6d32290fdc6b62acc9a08a6f2a31942f.js": "/NSERC-TeamProject/precache-manifest.6d32290fdc6b62acc9a08a6f2a31942f.js",
     "service-worker.js": "/NSERC-TeamProject/service-worker.js",
     "static/js/2.164b6aa9.chunk.js.LICENSE.txt": "/NSERC-TeamProject/static/js/2.164b6aa9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.48558775.js",
     "static/js/2.164b6aa9.chunk.js",
-    "static/js/main.172e8118.chunk.js"
+    "static/js/main.ef256883.chunk.js"
   ]
 }
