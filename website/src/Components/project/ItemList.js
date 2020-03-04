@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 const ItemList = ({projects}) => {
     var arr = [];
     for (let projectId in projects){
-        let copy = { }
-        Object.assign(copy, projects[projectId])
+        let copy = { };
+        Object.assign(copy, projects[projectId]);
 
-        copy.id = projectId
+        copy.id = projectId;
         arr.push(copy)
     }
 
