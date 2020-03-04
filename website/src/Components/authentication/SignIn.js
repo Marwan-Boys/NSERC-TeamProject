@@ -1,31 +1,37 @@
 import React, {Component} from "react";
+import {connect} from 'react-redux'
+import {signIn} from "../../store/Actions/CheckUsers";
+import {Redirect} from "react-router-dom";
 
 class SignIn extends Component {
     state = {
         email: '',
         password: ''
-    }
+    };
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
-    }
+    };
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
-    }
+        console.log(this.state);
+        this.props.signIn(this.state);
+    };
     render() {
+        const {auth} = this.props;
+        if (auth.uid) return <Redirect to={'/dashboard'}/>;
         return (
             <div className={"container"}>
                 <form onSubmit={this.handleSubmit} className={"white"}>
                     <h5 className={"grey-text text-darken-3"}>Sign In</h5>
                     <div className={"input-field"}>
                         <label htmlFor={"email"}>Email</label>
-                        <input type={"email"} id={"email"} onChange={this.handleChange}/>
+                        <input type={"email"} id={"email"} onChange={this.handleChange} required/>
                     </div>
                     <div className={"input-field"}>
                         <label htmlFor={"password"}>Password</label>
-                        <input type={"password"} id={"password"} onChange={this.handleChange}/>
+                        <input type={"password"} id={"password"} onChange={this.handleChange} required/>
                     </div>
                     <div className={"input-field"}>
                         <button className={"btn pink lighten-1 z-depth0"}>Login</button>
@@ -35,4 +41,17 @@ class SignIn extends Component {
         )
     }
 }
-export default SignIn;
+
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (credentials) => dispatch (signIn(credentials))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

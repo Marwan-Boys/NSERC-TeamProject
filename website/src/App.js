@@ -12,16 +12,18 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"App"}>
-                    <NavigationBar />
+                    <NavigationBar/>
                     <Switch>
-                        <Route exact path={'/project/:id'} component={ItemDetails}/>
-                        <Route exact path={'/signin'} component={SignIn}/>
-                        <Route exact path={'/signup'} component={SignUp}/>
-                        <Route exact path={'/create'} component={CreateItem}/>
-                        <Route Exact path={'/'} component={Dashboard}/>
+                        <Route Exact path={'/project/:id'} component={ItemDetails}/>
+                        <Route Exact path={'/signin'} component={SignIn}/>
+                        <Route Exact path={'/signup'} component={SignUp}/>
+                        <Route Exact path={'/create'} component={CreateItem}/>
+                        <Route Exact path={'/dashboard'} component={Dashboard}/>
+                        <Route Exact path={'/'} component={SignIn}/>
                     </Switch>
                 </div>
-            </BrowserRouter>)
-            ;}
+            </BrowserRouter>
+        );
+    }
 }
 export default App;

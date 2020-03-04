@@ -12,8 +12,9 @@ export const createProject = (project) => {
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_PROJECT', project});
+            window.location="/dashboard";
         }).catch((err) => {
             dispatch({ type: 'CREATE_PROJECT_ERROR', err});
         })
     }
-};
+}
