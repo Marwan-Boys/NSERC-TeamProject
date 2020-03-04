@@ -12,7 +12,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className={"App"}>
-                    <NavigationBar isLoggedIn={false} />
+                    <NavigationBar/>
                     <Switch>
                         <Route Exact path={'/project/:id'} component={ItemDetails}/>
                         <Route Exact path={'/signin'} component={SignIn}/>
