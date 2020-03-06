@@ -12,12 +12,18 @@ import { reactReduxFirebase, getFirebase} from "react-redux-firebase";
 import firebaseConfig from './config/firebaseConfig'
 import * as firebase from 'firebase'
 
+// react-redux-firebase config
+const rrfConfig = {
+    userProfile: 'users',
+    useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+};
+
 const store = createStore(rootReducer,
     compose(
         applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
         reduxFirestore(firebaseConfig),
         reactReduxFirebase(firebase,firebaseConfig),
-        reactReduxFirebase(firebase, {useFirestoreForProfile: true, userProfile: 'users', attachAuthIsReady: true})
+        reactReduxFirebase(firebase, {rrfConfig, attachAuthIsReady: true})
     )
 );
 store.firebaseAuthIsReady.then(() => {
