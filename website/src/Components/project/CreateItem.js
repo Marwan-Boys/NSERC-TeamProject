@@ -14,15 +14,11 @@ class CreateItem extends Component {
         })
     };
     handleSubmit = (e) => {
+        const {auth} = this.props;
+
         e.preventDefault();
         console.log(this.state);
-        if (this.state.project == null){
-            console.log("Please enter the project title!");
-        } else if (this.state.description == null){
-            console.log("Please enter the project description!");
-        } else {
-            this.props.createProject(this.state);
-        }
+        this.props.createProject(this.state, auth.uid);
     };
     render() {
         const {auth} = this.props;
@@ -53,11 +49,11 @@ const mapStateToProps = (state) => {
     return {
         auth: state.firebase.auth
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        createProject: (project) => dispatch (createProject(project))
+        createProject: (project, uid) => dispatch (createProject(project, uid))
     }
 };
 

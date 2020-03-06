@@ -1,6 +1,6 @@
 
 import React, {Component} from "react";
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 import {signUp} from "../../store/Actions/CheckUsers";
 import {Redirect} from "react-router-dom";
 
